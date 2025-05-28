@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
     const [mail,setMail]=useState("")
     const [pass,setPass]=useState("")
+    const navigate=useNavigate()
     function checkMail(e){
         setMail(e.target.value)
     }
@@ -17,6 +19,7 @@ export default function Login(){
         }else{
             alert("Credentials not match");
         }
+        navigate("/")
     }
     return(
         <>

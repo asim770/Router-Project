@@ -34,7 +34,8 @@ export default function Register(){
         localStorage.setItem("number",number)
         localStorage.setItem("email",email)
         localStorage.setItem("password",password)
-        navigate("");
+        alert("Registration Successful")
+        navigate("/");
     }
 
     return(
