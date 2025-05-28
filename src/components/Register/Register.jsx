@@ -39,15 +39,18 @@ export default function Register(){
 
     return(
         <>
-        <div>
-            <h2 className="text-center">Register</h2>
-            <input type="text" onChange={enterName} value={name} className="input"/>
-            <input type="text" onChange={enterNumber} value={number} className="input"/>
-            <input type="email" onChange={enterEmail} value={email} className="input"/>
-            <input type="password" onChange={enterPassword} value={password} className="input"/>
-            <button onClick={storeCredentials}>
-                Submit
-            </button>
+        <div className="flex items-center justify-center  bg-gray-100 border-style: solid border-gray-500 p-4">
+            <div className="flex flex-col space-y-2 p-7 bg-amber-200 rounded-4xl shadow hover:shadow-lg transition duration-300">
+                <h2 className="text-center">REGISTER</h2>
+                
+                <input type="text" onChange={enterName} value={name} className="input" placeholder="Name"/>
+                <input type="text" onChange={enterNumber} value={number} className="input" placeholder="Number"/>
+                <input type="email" onChange={enterEmail} value={email} className="input" placeholder="Email"/>
+                <input type="password" onChange={enterPassword} value={password} className="input" placeholder="Password"/>
+                <button onClick={storeCredentials} className=" bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300">
+                    Submit
+                </button>
+            </div>
         </div>
         
         </>

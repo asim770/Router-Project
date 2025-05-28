@@ -4,5 +4,5 @@
 }
 
 .input{
-    @apply border-2 m-1.5;
+    @apply border-1 m-1.5 h-12 w-65 p-2 rounded-lg border-gray-300 bg-gray-100 shadow hover:shadow-lg transition duration-300;
 }
