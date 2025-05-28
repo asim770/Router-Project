@@ -2,3 +2,7 @@
 .hello{
     @apply text-2xl bg-gray-300 text-black text-center;
 }
+
+.input{
+    @apply border-2 m-1.5;
+}

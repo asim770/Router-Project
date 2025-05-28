@@ -14,7 +14,7 @@ export default function Github(){
     return(
         
         <>
-        <div className="text-2xl bg-gray-300 text-black text-center">Followers: {data.following}</div>
+        <div className="hello">Followers: {data.following}</div>
         <div className="hello">URL: {data.url}</div>
         </>
     )
