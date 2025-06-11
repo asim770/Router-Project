@@ -1,12 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../../context/UserContext";
 export default function Register(){
     const [name,setName]=useState("")
     const [number,setNumber]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const navigate=useNavigate()
+    const {setUser}=useContext(UserContext)
+
     function enterName(e){
         const Name=e.target.value;
         setName(Name)
@@ -34,6 +38,7 @@ export default function Register(){
         localStorage.setItem("number",number)
         localStorage.setItem("email",email)
         localStorage.setItem("password",password)
+        setUser({name,number})
         alert("Registration Successful")
         navigate("/");
     }

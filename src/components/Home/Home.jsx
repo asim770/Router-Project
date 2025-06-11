@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useContext} from "react";
+import UserContext from "../../context/UserContext";
 import { Link } from "react-router-dom";
 export default function Home() {
+    const {user}=useContext(UserContext);
     return (
         <div className="mx-auto w-full max-w-7xl">
             <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
@@ -41,5 +43,6 @@ export default function Home() {
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
         </div>
+        
     );
 }
